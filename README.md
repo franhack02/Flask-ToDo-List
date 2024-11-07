@@ -16,10 +16,24 @@ git clone https://github.com/zacclery/Flask-ToDo-List.git && cd todo_app
 
 ##### Create virtualenv and activate
 
-pip3 install -r requirements.txt
+## Crear entorno virtual
+
+```bash
+python3 -m venv .venv
+```
+
+## Activar entorno virtual
+
+```bash
+source .venv/bin/activate
+```
+
+## Instalar 
+
+pip install -r requirements.txt
 
 export FLASK_APP=app.py  
-flask run  #flask run --host=0.0.0.0 (if require server to be publicly accessible)  
+flask run  # flask run --host=0.0.0.0 (if require server to be publicly accessible)  
 
 Navigate to: http://localhost:5000/
 
