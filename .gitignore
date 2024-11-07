@@ -1,4 +1,5 @@
-venv/
+.env
+.venv/
 todo_backup.db
 .pytest_cache/
 __pycache__/

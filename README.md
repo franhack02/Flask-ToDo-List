@@ -12,31 +12,61 @@ The project makes use of Python3, Flask, SQLite, Bootstrap and JQuery.
 
 ## Getting Started
 
-git clone https://github.com/zacclery/Flask-ToDo-List.git && cd todo_app
+```bash
+git clone https://github.com/booleancl/Flask-ToDo-List 
+cd Flask-ToDo-List
+```
 
-##### Create virtualenv and activate
+## Create virtualenv and activate
 
-## Crear entorno virtual
 
 ```bash
 python3 -m venv .venv
 ```
 
-## Activar entorno virtual
+## Activate virtual env
 
 ```bash
 source .venv/bin/activate
 ```
 
-## Instalar 
+## Install
 
 pip install -r requirements.txt
 
-export FLASK_APP=app.py  
-flask run  # flask run --host=0.0.0.0 (if require server to be publicly accessible)  
+## Create .env file with the following 
+
+FLASK_APP=app.py
+
+## Run
+```bash
+flask run  
+```
+## If require server to be publicly accessible  
+
+```bash
+flask run --host=0.0.0.0
+```
+## Browse
 
 Navigate to: http://localhost:5000/
 
+
+## Create database tables
+
+Stop the server then run the following:
+
+```bash
+flask shell
+db.create_all()
+exit()
+```
+
+## Run again and browse
+
+```bash
+flask
+```
 ## Authors
 
 **Zac Clery**
