@@ -62,3 +62,7 @@ def resolve_tasks():
             task.done = True
     db.session.commit()
     return redirect('/')
+
+@app.route('/colgadito')
+def hang_person():
+    return render_template('colgadito.html')

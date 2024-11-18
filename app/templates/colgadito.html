@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado - Oficios</title>
+    <link href="http://fonts.cdnfonts.com/css/sf-pixelate" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/palabras.js') }}" defer></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <h1>Ahorcado Pixel</h1>
+    <!-- Menú de selección de oficio -->
+    <div id="menuContainer">
+        <p>¡Bienvenido! Selecciona tu oficio:</p>
+        <button class="officioBtn" data-oficio="oficio1">Administración y Servicios</button>
+        <button class="officioBtn" data-oficio="oficio2">Artes Culinarías</button>
+        <button class="officioBtn" data-oficio="oficio3">Peluquería y Belleza</button>
+        <button class="officioBtn" data-oficio="oficio4">Programación</button>
+    </div>
+    <!-- Contenedor del juego, oculto inicialmente -->
+    <div id="gameContainer" style="display: none;">
+        <div>
+            <div id="hintContainer"></div> <!-- Este div mostrará la pista -->
+            <canvas id="canvas"></canvas> <!-- El canvas donde se dibuja el ahorcado -->
+            <div id="usedLetters"></div> <!-- Mostrará las letras usadas -->
+        </div>
+        <div id="wordContainer"></div> <!-- Contenedor de las letras de la palabra -->
+        <!-- Contenedor de botones START y Seleccionar otro oficio -->
+        <div class="button-container" style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+            <button id="startButton" style="display:none;">START</button>
+            <button id="selectNewOfficioButton" style="display: none;" onclick="goToMenu()">Seleccionar otro oficio</button>
+        </div>
+        <div id="messageContainer"></div> <!-- Este div mostrará el mensaje de victoria o derrota -->
+        <div id="gifContainer" style="text-align: center; display: none;"></div>
+    </div>
+</body>
+</html>
+
+

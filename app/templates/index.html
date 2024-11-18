@@ -90,7 +90,6 @@ $(function() {
   $(":checkbox").click(function(e){
     e.preventDefault();
     var task = e.target;
-    console.log(task)
     $.post("/toggle", {"task_id": task.id}).done(function() {
       task.checked = !task.checked;
       $('label[for='+task.id+']').toggleClass('done');

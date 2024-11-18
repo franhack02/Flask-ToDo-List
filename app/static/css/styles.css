@@ -1,0 +1,165 @@
+/* Estilos generales */
+body {
+    background-color: #4a4063;
+    color: #fff;
+    font-family: 'SF Pixelate', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+/* Estilo para el contenedor del menú */
+#menuContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Estilo de los botones de oficio */
+.officioBtn {
+    margin: 10px;
+    background-color: #d95d39;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 250px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto hover para los botones de oficio */
+.officioBtn:hover {
+    background-color: #bc4c2d;
+    transform: translateY(-5px); /* Efecto de elevación */
+}
+
+/* Estilo del contenedor del juego */
+#gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;  /* Oculto inicialmente */
+}
+
+/* Estilo común para los botones START y Seleccionar otro oficio */
+button {
+    margin-top: 20px;
+    font-family: 'SF Pixelate', sans-serif;
+    border: none;
+    width: 300px;
+    padding: 15px;
+    background: #d95d39;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto hover para los botones START y Seleccionar otro oficio */
+button:hover {
+    background-color: #bc4c2d;
+    transform: translateY(-5px); /* Efecto de elevación */
+}
+
+/* Estilo para el contenedor de GIFs (victoria/perdida) */
+#gifContainer {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    display: none;  /* Oculto inicialmente */
+}
+
+#gifContainer img {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilo para las letras ya usadas */
+#usedLetters {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #d95d39;
+}
+
+/* Estilo para las letras que se usan */
+.used-letter {
+    margin-right: 5px;
+    font-size: 18px;
+    color: #d95d39;
+    transition: transform 0.2s ease;
+}
+
+.used-letter:hover {
+    transform: scale(1.2);  /* Efecto al pasar el mouse por encima */
+}
+
+/* Estilo para las letras ocultas en la palabra (guiones bajos) */
+/* Letras o guiones bajos dentro del contenedor */
+#wordContainer span {
+    font-size: 30px; /* Tamaño del texto */
+    border-bottom: 2px solid #fff; /* Línea que simula el guion bajo */
+    display: inline-block;
+    width: 30px; /* Ancho uniforme para cada letra o guion */
+    text-align: center;
+    margin: 0 5px; /* Espaciado entre las letras */
+}
+
+#wordContainer {
+    display: flex;
+    justify-content: center; /* Centrar los guiones bajos */
+    margin-top: 20px;
+    gap: 10px; /* Espacio entre letras (opcional) */
+}
+
+
+
+
+/* Eliminar animación de las letras */
+.letter {
+    opacity: 1;  /* No hay animación, mantiene la letra visible */
+}
+
+/* Ocultar letras que aún no se han adivinado */
+.hidden {
+    opacity: 0;  /* Hace invisibles las letras, pero mantiene el espacio ocupado */
+}
+
+/* Estilo para el canvas (lienzo del ahorcado) */
+canvas {
+    border: none; /* Eliminar borde */
+    background-color: transparent; /* Fondo transparente */
+    display: block; /* Eliminar el espacio extra debajo del canvas */
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+}
+
+/* Estilos de mensaje de victoria o derrota */
+#messageContainer {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #d95d39;
+    text-align: center;
+}
+
+/* Estilo para la pista */
+#hintContainer {
+    margin-top: 20px;
+    font-size: 20px;
+    font-style: italic;
+    color: #bbb;
+    text-align: center;
+}
