@@ -66,3 +66,11 @@ def resolve_tasks():
 @app.route('/colgadito')
 def hang_person():
     return render_template('colgadito.html')
+
+@app.route('/Mi pagina web')
+def my_website():
+    return render_template('Mi_pagina_web.html')
+
+@app.route('/contacto')
+def contacto():
+    return render_template('contacto.html')  # Página de contacto
